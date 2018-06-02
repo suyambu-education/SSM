@@ -1,0 +1,62 @@
+<% include ../../../Elements/sidenav %>    
+        <div class="content-i">
+                <div class="content-box" style="height: 1388px;">
+                    <div class="row">
+                        <div class="col-sm-12">
+    <form action="/setting/ManageClass/update/<%= SettingClassShow._id %>" method="post">
+    <div class="row">
+        <div class="col-sm-2"></div>
+            <div class="col-sm-8" style="background-color:#fff; padding: 20px">
+                <div class="col-md-12">
+                   <div class="col-md-6">
+                        <label for="">Class Name</label> <input value="<%= SettingClassShow.classname %>" type="text" name="classname" class="form-control"  >
+                   </div>
+               </div>
+               <div class="col-md-12">
+                    <div class="col-md-6">
+                    <label for="">Section Name</label> <input type="text" value="<%= SettingClassShow.sectionname %>" name="sectionname" class="form-control" >
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <label for="">Code </label> <input type="text" value="<%= SettingClassShow.sectionname %>"  name="code" class="form-control" >
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <label for="">Grading system type</label>
+                        <select name="gradingsystemtype" id="" class="form-control" >
+                            <option selected value="<%= SettingClassShow.gradingsystemtype %>"><%= SettingClassShow.gradingsystemtype %></option>
+                            <option value="Normal" >Normal</option>
+                            <option value="GPA">GPA</option>
+                            <option value="CWA">CWA</option>
+                            <option value="CCE">CCE</option>
+                            <option value="ICSE">ICSE</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <% if(SettingClassShow.enableelectiveselectio == 1 ){%>
+                       <label for="">Enable elective selection</label> <input checked  type="checkbox" value="1" name="enableelectiveselectio">
+                       <%}else{%>
+                       <label for="">Enable elective selection</label> <input   type="checkbox" value="1" name="enableelectiveselectio">
+                        <%}%>                        
+                    </div>
+                </div>
+                
+                        <div class="col-md-12">
+                                <div class="col-md-6">
+                                    <button type="submit"  style="margin: 20px" class="btn btn-success">update</button>
+                                </div>
+                        </div>
+            </div>
+        <div class="col-sm-2"></div>
+        </div>
+        </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    <% include ../../../Elements/footers %>

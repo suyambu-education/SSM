@@ -1,0 +1,43 @@
+<% include ../../../Elements/sidenav %>    
+        <div class="content-i">
+                <div class="content-box" style="height: 1388px;">
+                    <div class="row">
+                        <div class="col-sm-12">
+<a href="/setting/ManageClass/Add"><button class="btn btn-warning">Add new</button></a>
+<hr>
+    <% if(ShowSettingClass.length > 0) { %>
+        <table border="1" cellpadding=5 cellspacing=5>
+            <thead>
+                <th>S No</th>
+                <th>Class</th>
+                <th colspan="2">Action</th>
+            </thead>
+            <tbody>
+                    <% for( var i=0;i<ShowSettingClass.length;i++ ){ var j =i+1; %>
+                <tr>                   
+                    <td><%= j %></td>
+                    <td><%= ShowSettingClass[i].classname %></td>
+                    <td>
+                       <div> <button>
+                           <a href="/setting/ManageClass/edit/<%= ShowSettingClass[i]._id %>">Edit</a>
+                       </button>
+                        
+                    </div>
+                    </td>
+                    <td><form action="/setting/ManageClass/delete/<%= ShowSettingClass[i]._id %>" method="post">
+                            <button>Delete</button>
+                    </form></td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+    
+    <% } else { %>
+    <p>List not Available <a href="/setting/ManageClass/Add">Add new</a></p>
+    <% } %>
+</div>
+</div>
+</div>
+</div>
+
+<% include ../../../Elements/footers %>

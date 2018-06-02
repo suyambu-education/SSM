@@ -1,0 +1,105 @@
+<% include ../Elements/sidenav %>    
+        <div class="content-i">
+                <div class="content-box">
+                    <div class="row">
+                        <div class="col-sm-12">
+        <form action="/addmission/saveP" method="post">
+        <div class="row">
+           
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8" style="background-color:#fff; padding: 20px">
+                    <div class="col-md-12">
+                        <div class="col-md-12">
+                                <div>
+                                    Addmission No <input type="text" name="Admission_number" class="form-control" id="AddmissionNo">
+                                </div>                               
+                        </div>
+                      
+                        <div class="col-md-12">
+                                <label for="">Parent - Personal details</label>
+                                <div style="  height: 3px;width: 100%;background-color: brown;"></div>
+                        </div>
+                        <div class="col-md-12">
+                            <div>
+                            First Name <input type="text" class="form-control" name="First_Name" id="fname">
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            Last Name  <input type="text" name="Last_Name" class="form-control" id="lname">
+                        </div>
+                        <div class="col-md-12">
+                             Relation  <select name="Relation" class="form-control">
+                                        <option value="Father">Father</option>
+                                        <option value="Mother">Mother</option>
+                                        <option value="Guardian">guardian</option>
+                                        
+                                      </select>
+                        </div>
+                        <div class="col-md-12">
+                                Date of Birth   <input type="date" name="Date_of_Birth" class="form-control" id="dob">
+                        </div>
+                       
+                        <div class="col-md-12">
+                                 Education<input type="text" name="Education" id="Education" class="form-control">
+                        </div>
+                        
+                        <div class="col-md-12">
+                                Occupation <input type="text" name="Occupation" id="Occupation" class="form-control">
+                        </div>
+                        
+                        <div class="col-md-12">
+                                Income <input type="number" name="Income" id="Income" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                 <label for="">Parent - Contact Details</label>
+                        <div style="  height: 3px;width: 100%;background-color: brown;"></div>
+                        </div>
+                        <div class="col-md-12">
+                                E-Mail <input type="email" name="Email" id="mail" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                            Address Line1 <input type="text" name="Address_Line1" id="AddressLine1" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                Address Line2 <input type="text" name="Address_Line2" id="AddressLine2" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                City <input type="text" name="City" id="city" class="form-control">
+                        </div>
+                        
+                        <div class="col-md-12">
+                                State <input type="text" name="State" id="State" class="form-control">
+                        </div>
+                        
+                        <div class="col-md-12">
+                                Country <input type="text" name="Country" id="Country" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                Phone 1  <input type="number" name="phone1" id="Phone" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                Phone 2 <input type="number" name="phone2" id="Phone" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                Mobile <input type="number" name="Mobile" id="Mobile" class="form-control">
+                        </div>
+                       
+                        
+                        <div class="col-md-12" style="padding: 40px">
+                              <input type="submit" value="Save & Proceed" class="btn btn-success">
+                        </div>
+                     </div>  
+                   
+                </div>
+                 <div class="col-sm-2" style="">
+
+                </div>
+                
+        </div>
+</form></div>
+</div>
+</div>
+</div>
+
+<% include ../Elements/footers %>

@@ -1,0 +1,106 @@
+<% include ../../Elements/sidenav %>      
+        <div class="content-i">
+                <div class="content-box" style="height: 1388px;">
+                    <div class="row">
+                        <div class="col-sm-12">
+    
+        <form action="/parents/update/<%= Parents._id %>" method="post">
+        <div class="row">
+           
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8" style="background-color:rgb(255, 255, 255); padding: 20px">
+                    <div class="col-md-12">
+                        <div class="col-md-6">
+                                <div>
+                                    Addmission No <input type="text" value="<%= Parents.Admission_number %>" name="Admission_number" class="form-control" id="AddmissionNo">
+                                </div>                               
+                        </div>
+                      
+                        <div class="col-md-12">
+                                <label for="">Parent - Personal details</label>
+                                <div style="  height: 3px;width: 100%;background-color: brown;"></div>
+                        </div>
+                        <div class="col-md-12">
+                            <div>
+                            First Name <input type="text" value="<%= Parents.First_Name %>" class="form-control" name="First_Name" id="fname">
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            Last Name  <input type="text" value="<%= Parents.Last_Name %>" name="Last_Name" class="form-control" id="lname">
+                        </div>
+                        <div class="col-md-12">
+                             Relation  <select name="Relation"  class="form-control">
+                                        <option value="<%= Parents.Relation %>" selected><%= Parents.Relation %></option>
+                                        <option value="Father">Father</option>
+                                        <option value="Mother">Mother</option>
+                                        <option value="Guardian">guardian</option>
+                                        
+                                      </select>
+                        </div>
+                        <div class="col-md-12">
+                                Date of Birth   <input type="date" value="<%= Parents.Date_of_Birth %>" name="Date_of_Birth" class="form-control" id="dob">
+                        </div>
+                       
+                        <div class="col-md-12">
+                                 Education<input type="text" value="<%= Parents.Education %>" name="Education" id="Education" class="form-control">
+                        </div>
+                        
+                        <div class="col-md-12">
+                                Occupation <input type="text" value="<%= Parents.Occupation %>" name="Occupation" id="Occupation" class="form-control">
+                        </div>
+                        
+                        <div class="col-md-12">
+                                Income <input type="number" value="<%= Parents.Income %>" name="Income" id="Income" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                 <label for="">Parent - Contact Details</label>
+                        <div style="  height: 3px;width: 100%;background-color: brown;"></div>
+                        </div>
+                        <div class="col-md-12">
+                                E-Mail <input type="email" value="<%= Parents.Email %>" name="Email" id="mail" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                            Address Line1 <input type="text" value="<%= Parents.Address_Line1 %>" name="Address_Line1" id="AddressLine1" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                Address Line2 <input type="text" value="<%= Parents.Address_Line2 %>" name="Address_Line2" id="AddressLine2" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                City <input type="text" name="City"  value="<%= Parents.City %>" id="city" class="form-control">
+                        </div>
+                        
+                        <div class="col-md-12">
+                                State <input type="text" name="State" value="<%= Parents.State %>" id="State" class="form-control">
+                        </div>
+                        
+                        <div class="col-md-12">
+                                Country <input type="text" name="Country" value="<%= Parents.Country %>" id="Country" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                Phone 1  <input type="number" value="<%= Parents.phone1 %>" name="phone1" id="Phone" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                Phone 2 <input type="number" name="phone2" value="<%= Parents.phone2 %>" id="Phone" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                Mobile <input type="number" name="Mobile"  value="<%= Parents.Mobile %>" id="Mobile" class="form-control">
+                        </div>
+                       
+                        
+                        <div class="col-md-12" style="padding: 40px">
+                              <input type="submit" value="Update" class="btn btn-success">
+                        </div>
+                     </div>  
+                   
+                </div>
+                 <div class="col-sm-2" >
+
+                </div>
+                
+        </div>
+</form></div>
+</div>
+</div>
+</div>
+<% include ../../Elements/footers %>

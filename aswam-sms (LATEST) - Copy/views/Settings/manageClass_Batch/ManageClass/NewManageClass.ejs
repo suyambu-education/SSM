@@ -1,0 +1,85 @@
+<% include ../../../Elements/sidenav %>    
+        <div class="content-i">
+                <div class="content-box" style="height: 1388px;">
+                    <div class="row">
+                        <div class="col-sm-12">
+    <form action="/setting/ManageClass/save" method="post">
+    <div class="row">
+        <div class="col-sm-2"></div>
+            <div class="col-sm-8" style="background-color:#FFF; padding: 20px">
+                <div class="col-md-12">
+                   <div class="col-md-6">
+                        <label for="">Class Name</label> <input type="text" name="classname" class="form-control"  >
+                   </div>
+               </div>
+               <div class="col-md-12">
+                    <div class="col-md-6">
+                    <label for="">Section Name</label> <input type="text" name="sectionname" class="form-control" >
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <label for="">Code </label> <input type="text" name="code" class="form-control" >
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <label for="">Grading system type</label>
+                        <select name="gradingsystemtype" id="" class="form-control" >
+                            <option value="Normal" selected>Normal</option>
+                            <option value="GPA">GPA</option>
+                            <option value="CWA">CWA</option>
+                            <option value="CCE">CCE</option>
+                            <option value="ICSE">ICSE</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                       <label for="">Enable elective selection</label> <input  type="checkbox" value="1" name="enableelectiveselectio">
+                    </div>
+                </div>
+                <h3>Initial batch details</h3>
+                <div class="col-md-12">
+                        <div class="col-md-6">
+                            <label for="">Name </label> <input type="text" name="batchname" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                            <div class="col-md-6">
+                                <label for="">Academic year</label>
+                                <select name="bacademicyear" id="" class="form-control" >
+                                    <option value="Select an academic Year" selected>Select an academic year</option>
+                                    <option value="First Academic Year">First Academic Year</option>
+                                   
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Start date
+                        End date -->
+                        <div class="col-md-12">
+                            <div class="col-md-6">
+                                <label for="">Start date </label> <input type="date" name="bstartdate" class="form-control" >
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                                <div class="col-md-6">
+                                    <label for="">End date</label> <input type="date" name="benddate" class="form-control" >
+                                </div>
+                        </div>
+             
+                        <div class="col-md-12">
+                                <div class="col-md-6">
+                                    <button type="submit" style="margin: 20px" class="btn btn-success">Save</button>
+                                </div>
+                        </div>
+            </div>
+        <div class="col-sm-2"></div>
+        </div>
+        </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    <% include ../../../Elements/footers %>

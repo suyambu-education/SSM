@@ -1,0 +1,54 @@
+<% include ../Elements/sidenav %>    
+        <div class="content-i">
+                <div class="content-box">
+                    <div class="row">
+                        <div class="col-sm-12">
+    
+        <form action="/addmission/savePE" method="post">
+        <div class="row">
+           
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8" style="background-color:#FFF; padding: 20px">
+                    <div class="col-md-12">
+                        
+                      
+                        <div class="col-md-12">
+                                <label for="">Previous Educational Details</label>
+                                <div style="  height: 3px;width: 100%;background-color: brown;"></div>
+                        </div>
+                        <div class="col-md-12">
+                            <div>
+                            Institution Name <input type="text" class="form-control" name="Institution_Name" id="fname">
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                                Class  <input type="text" name="Class" class="form-control" id="Class">
+                        </div>
+                       
+                        
+                        <div class="col-md-12">
+                                Year <input type="number" name="Year" id="Year" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                Total marks <input type="number" name="Total_marks" id="Total_marks" class="form-control">
+                        </div>
+                        
+                        
+                        <div class="col-md-12" style="padding: 40px">
+                              <input type="submit" value="Save & Proceed" class="btn btn-success">
+                        </div>
+                     </div>  
+                   
+                </div>
+                 <div class="col-sm-2" >
+
+                </div>
+                
+        </div>
+</form></div>
+</div>
+</div>
+</div>
+
+<% include ../Elements/footers %>

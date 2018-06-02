@@ -1,0 +1,145 @@
+<% include ../../Elements/sidenav %>    
+        <div class="content-i">
+                <div class="content-box" style="height: 1388px;">
+                    <div class="row">
+                        <div class="col-sm-12">
+    
+        <form action="/student/update/<%= Student._id %> " method="post">
+        <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8" style="background-color:#fff; padding: 20px">
+                    <div class="col-md-12">
+                        <div class="col-md-6">
+                                <div>
+                                    Addmission No <input type="text" value="<%= Student.Admission_number %>" name="Admission_number" class="form-control" id="AddmissionNo">
+                                </div>                               
+                        </div>
+                        <div class="col-md-6">
+                                <div>
+                                Addmission Date <input type="date" value="<%= Student.Admission_Date %>"  name="Admission_Date" class="form-control" id="AddmissionNo">
+                                </div> 
+                        </div>
+                        <div class="col-md-12">
+                                <label for="">Personal details</label>
+                                <div style="  height: 3px;width: 100%;background-color: brown;"></div>
+                        </div>
+                        <div class="col-md-12">
+                            <div>
+                            First Name <input type="text" value="<%= Student.First_Name %>"  class="form-control" name="First_Name" id="fname">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            Middle Name <input type="text" value="<%= Student.Middle_Name %>" name="Middle_Name" class="form-control" id="mname">
+                        </div>
+                        <div class="col-md-12">
+                            Last Name  <input type="text" value="<%= Student.Last_Name %>" name="Last_Name" class="form-control" id="lname">
+                        </div>
+                        <div class="col-md-12">
+                                Date of Birth   <input type="date" value="<%= Student.Date_of_Birth %>"  name="Date_of_Birth" class="form-control" id="dob">
+                        </div>
+                        <div class="col-md-12">
+                                Gender   
+                                
+                                <div> <% if (Student.Gender == "Male") {%>
+                                        Male <input type="radio" checked  name="Gender" value="Male"  id="Gender"> female <input type="radio" name="Gender" value="female"  id="Gender">
+                                      <% }else{%>
+                                        Male <input type="radio" checked  name="Gender" value="Male"  id="Gender"> female <input  type="radio" checked name="Gender" value="female"  id="Gender">
+                                      <%}%>
+                                </div>
+                        </div>
+                        <div class="col-md-12">
+                                Blood group <input type="text" value="<%= Student.Blood_group %>" name="Blood_group" id="bloodgroup" class="form-control">
+                        </div>
+                        
+                        <div class="col-md-12">
+                                Birth Place <input type="text" value="<%= Student.Birth_Place %>" name="Birth_Place" id="BirthPlace" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                        Nationality <input type="text" value="<%= Student.Nationality %>" name="Nationality" id="Nationality" class="form-control">
+                                </div>
+                        <div class="col-md-12">
+                                Mother Tongue <input type="text" value="<%= Student.Mother_Tongue %>"  name="Mother_Tongue" id="MotherTongue" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                            Category <input type="text" value="<%= Student.Category %>" name="Category" id="Category" class="form-control">
+                        </div>
+                        
+                        <div class="col-md-12">
+                            Religion <input type="text" value="<%= Student.Religion %>" name="Religion" id="Religion" class="form-control">
+                        </div>
+
+                        <div class="col-md-12">
+                                <label for="">Contact Details</label>
+                                <div style="  height: 3px;width: 100%;background-color: brown;"></div>
+                        </div>
+                        <div class="col-md-12">
+                            Address Line1 <input type="text" value="<%= Student.Address_Line1 %>" name="Address_Line1" id="AddressLine1" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                Address Line2 <input type="text" value="<%= Student.Address_Line2 %>" name="Address_Line2" id="AddressLine2" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                City <input type="text" value="<%= Student.City %>" name="City" id="city" class="form-control">
+                        </div>
+                        
+                        <div class="col-md-12">
+                                State <input type="text" value="<%= Student.State %>" name="State" id="State" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                PIN code <input type="number" value="<%= Student.PIN_code %>" name="PIN_code" id="PINcode" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                Country <input type="text" value="<%= Student.Country %>" name="Country" id="Country" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                Phone <input type="number" value="<%= Student.phone %>" name="phone" id="Phone" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                Mobile <input type="number" value="<%= Student.Mobile %>" name="Mobile" id="Mobile" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                E-Mail <input type="email" value="<%= Student.Email %>" name="Email" id="Email" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                <label for="">Class & Batch details</label>
+                                <div style="  height: 3px;width: 100%;background-color: brown;"></div>
+                        </div>
+                        <div class="col-md-12">
+                                class <input type="text" value="<%= Student.Class %>" name="Class" id="classst" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                Batch <input type="text" value="<%= Student.Batch %>" name="Batch" id="Batch" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                Roll number <input disabled type="text" value="<%= Student.Roll_number %>" name="Roll_number" id="Roll_number" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                <label for="">Settings</label>
+                                <div style="  height: 3px;width: 100%;background-color: brown;"></div>
+                        </div>
+                        <div class="col-md-12">
+                                Biometric ID <input disabled type="text" value="<%= Student.Biometric_ID %>" name="Biometric_ID" id="Biometric_ID" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                Enable e-mail features <input type="text" value="<%= Student.Enable_email_features %>" name="Enable_email_features" id="Enable_email_features" class="form-control">
+                        </div>
+                        
+                        <div class="col-md-12" style="padding: 40px">
+                              <button type="submit" class="btn btn-success">
+                                      Update
+                              </button>
+                        </div>
+                     </div>  
+                   
+                </div>
+                 <div class="col-sm-2" style="background-color:#fff;">
+
+                </div>
+                
+        </div>
+  
+</form></div>
+</div>
+</div>
+</div>
+<% include ../../Elements/footers %>

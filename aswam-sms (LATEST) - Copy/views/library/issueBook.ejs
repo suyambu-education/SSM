@@ -1,0 +1,75 @@
+<% include ../Elements/sidenav %>    
+        <div class="content-i">
+                <div class="content-box" style="height: 1388px;">
+                    <div class="row">
+                        <div class="col-sm-12">
+
+                            <div class="col-md-2">
+
+                            </div>
+                            <div class="col-md-8">
+                                    
+                               <br>
+                               <label for="">Book Number/Barcode</label>
+                               
+                               <input type="search" name="" id="searchBook" class="form-control">
+                               <br>
+                               <button class="btn btn-primary" id="GetBookList" >Search</button>
+                            
+                               <hr id="line">
+                               <table id="searchDetails" class="table table-bordered">
+                                
+                              </table>
+                            </div>
+                            <div class="col-md-2">
+
+                            </div>
+                            
+</div>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(function() {
+        $('#searchDetails').hide();
+        $('#line').hide();
+        // search book
+        $('#GetBookList').click(function(){
+        debugger
+        var searchBook = document.getElementById("searchBook").value;
+        var searchUrl="/library/search/fetchdata/"+searchBook;
+
+        if(searchBook !=undefined || searchBook !=""){
+            $.ajax({
+                url:searchUrl,
+                type:'POST',
+                data: 'id=' + searchBook,
+                dataType: 'json',
+                success: function(booklist) {
+                console.log(booklist);
+                $('#searchDetails thead').remove();
+                $('#searchDetails tbody').remove();
+                if(booklist.status == "Available"){
+                var newRow=" <thead><tr><th>Book Number</th><th>Book Title</th><th>Author</th><th>Status</th></tr><thead><tbody><tr><td>"+ booklist.booknumber+"</td><td><a href='/library/edit/"+booklist._id+"'>"+ booklist.title+"</a></td><td>"+booklist.author+"</td><td>"+ booklist.status +"</td></tr></tbody>";
+                $('#line').show();
+                $('#searchDetails').show();
+                $('#searchDetails').append(newRow);
+                }else{
+                    var newRow="<thead><tr><th>No books found. Try Again!</th></tr></thead>";
+                $('#line').show();
+                $('#searchDetails').show();
+                $('#searchDetails').append(newRow);
+                }
+                }
+
+            });
+        }
+    });
+
+    //hide table
+
+    });
+    
+</script>
+
+<% include ../Elements/footers %>

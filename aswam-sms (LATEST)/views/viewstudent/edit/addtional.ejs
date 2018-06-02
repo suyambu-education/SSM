@@ -1,0 +1,48 @@
+<% include ../../Elements/sidenav %>    
+        <div class="content-i">
+                <div class="content-box" style="height: 1388px;">
+                    <div class="row">
+                        <div class="col-sm-12">
+        <form action="/addtional/update/<%= AddtionalDetails._id %>" method="post">
+        <div class="row">
+           
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8" style="background-color:#fff; padding: 20px">
+                    <div class="col-md-12">
+                        
+                      
+                        <div class="col-md-12">
+                                <label for="">Additional Details</label>
+                                <div style="  height: 3px;width: 100%;background-color: brown;"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div>
+                                    Height <input type="number" value="<%= AddtionalDetails.Height %>" class="form-control" name="Height" id="fname">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                                Weight  <input type="text" name="Weight" value="<%= AddtionalDetails.Weight %>" class="form-control" id="Class">
+                        </div>
+                       
+                        
+                        <div class="col-md-6">
+                                Allergies <textarea name="Allergies"  class="form-control" id="" cols="20" rows="5"><%= AddtionalDetails.Allergies %></textarea>
+                        </div>
+                        <div class="col-md-12" style="padding: 40px">
+                                <input type="submit" value="update" class="btn btn-success">
+                          </div>
+                     </div>  
+                   
+                </div>
+                 <div class="col-sm-2" >
+
+                </div>
+                
+        </div>
+</form></div>
+</div>
+</div>
+</div>
+
+<% include ../../Elements/footers %>

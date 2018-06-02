@@ -1,0 +1,142 @@
+<% include ../Elements/sidenav %>    
+        <div class="content-i">
+                <div class="content-box">
+                    <div class="row">
+                        <div class="col-sm-12">
+        <form action="/addmission/save" method="post">
+        <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8" style="background-color:#fff; padding: 20px">
+                    <div class="col-md-12">
+                        <div class="col-md-12">
+                                <div>
+                                    Addmission No <input type="text" name="Admission_number" class="form-control" id="AddmissionNo">
+                                </div>                               
+                        </div>
+                        <div class="col-md-12">
+                                <div>
+                                Addmission Date <input type="date" name="Admission_Date" class="form-control" id="AddmissionNo">
+                                </div> 
+                        </div>
+                        <div class="col-md-12">
+                                <label for="">Personal details</label>
+                                <div style="  height: 3px;width: 100%;background-color: brown;"></div>
+                        </div>
+                        <div class="col-md-12">
+                            <div>
+                            First Name <input type="text" class="form-control" name="First_Name" id="fname">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            Middle Name <input type="text" name="Middle_Name" class="form-control" id="mname">
+                        </div>
+                        <div class="col-md-12">
+                            Last Name  <input type="text" name="Last_Name" class="form-control" id="lname">
+                        </div>
+                        <div class="col-md-12">
+                                Date of Birth   <input type="date" name="Date_of_Birth" class="form-control" id="dob">
+                        </div>
+                        <div class="col-md-12">
+                                Gender   
+                                <div>
+                                        Male <input type="radio" name="Gender" value="Male"  id="Gender"> female <input type="radio" name="Gender" value="female"  id="Gender">
+                                </div>
+                        </div>
+                        <div class="col-md-12">
+                                Blood group <input type="text" name="Blood_group" id="bloodgroup" class="form-control">
+                        </div>
+                        
+                        <div class="col-md-12">
+                                Birth Place <input type="text" name="Birth_Place" id="BirthPlace" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                        Nationality <input type="text" name="Nationality" id="Nationality" class="form-control">
+                                </div>
+                        <div class="col-md-12">
+                                Mother Tongue <input type="text" name="Mother_Tongue" id="MotherTongue" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                            Category <input type="text" name="Category" id="Category" class="form-control">
+                        </div>
+                        
+                        <div class="col-md-12">
+                            Religion <input type="text" name="Religion" id="Religion" class="form-control">
+                        </div>
+
+                        <div class="col-md-12">
+                                <label for="">Contact Details</label>
+                                <div style="  height: 3px;width: 100%;background-color: brown;"></div>
+                        </div>
+                        <div class="col-md-12">
+                            Address Line1 <input type="text" name="Address_Line1" id="AddressLine1" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                Address Line2 <input type="text" name="Address_Line2" id="AddressLine2" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                City <input type="text" name="City" id="city" class="form-control">
+                        </div>
+                        
+                        <div class="col-md-12">
+                                State <input type="text" name="State" id="State" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                PIN code <input type="number" name="PIN_code" id="PINcode" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                Country <input type="text" name="Country" id="Country" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                Phone <input type="number" name="phone" id="Phone" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                Mobile <input type="number" name="Mobile" id="Mobile" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                E-Mail <input type="email" name="Email" id="Email" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                <label for="">Class & Batch details</label>
+                                <div style="  height: 3px;width: 100%;background-color: brown;"></div>
+                        </div>
+                        <div class="col-md-12">
+                                class <input type="text" name="Class" id="classst" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                Batch <input type="text" name="Batch" id="Batch" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                Roll number <input type="text" name="Roll_number" id="Roll_number" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                <label for="">Settings</label>
+                                <div style="  height: 3px;width: 100%;background-color: brown;"></div>
+                        </div>
+                        <div class="col-md-12">
+                                Biometric ID <input type="text" name="Biometric_ID" id="Biometric_ID" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                                Enable e-mail features <input type="text" name="Enable_email_features" id="Enable_email_features" class="form-control">
+                        </div>
+                        
+                        <div class="col-md-12" style="padding: 40px">
+                              <button type="submit" class="btn btn-success">
+                                      Save & Proceed
+                              </button>
+                        </div>
+                     </div>  
+                   
+                </div>
+                 <div class="col-sm-2">
+
+                </div>
+                
+        </div>
+  
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<% include ../Elements/footers %>

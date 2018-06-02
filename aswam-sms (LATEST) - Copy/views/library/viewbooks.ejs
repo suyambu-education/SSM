@@ -1,0 +1,29 @@
+<% include ../Elements/sidenav %>    
+        <div class="content-i">
+                <div class="content-box" style="height: 1388px;">
+                    
+                    <div class="row">
+                        <div class="col-sm-12">
+                              <a href="/library/edit/<%= Booklists._id %>"><button class="btn btn-danger">Edit</button></a>
+                               <hr>
+                        </div>
+                        
+                        <div class="col-sm-12">
+                                <style>
+                                        p label{
+                                            font-size: 19px;
+                                        }
+                            </style>
+                            <p><label for="">Title : </label> <%= Booklists.title %></p>
+                            <p><label for="">Book Number : </label> <%= Booklists.booknumber %></p>
+                            <p><label for="">Tag list : </label> <%= Booklists.customtags%></p>
+                            <p><label for="">Date of buying : </label> <%= Booklists.dateofbuying %></p>
+                            <p><label for="">Author : </label> <%= Booklists.author %></p>
+                            <p><label for="">Book Status : </label> <%= Booklists.status %></p>
+                            <p><label for="">Book Edition : </label> <%= Booklists.bookedition %></p>
+                           </div>
+                        </div>
+                        </div>
+                        </div>
+                        
+                        <% include ../Elements/footers %>

@@ -1,0 +1,40 @@
+<% include ../../../Elements/sidenav %>    
+        <div class="content-i">
+                <div class="content-box" style="height: 1388px;">
+                    <div class="row">
+                        <div class="col-sm-12">
+        <p>Select a class <select name="selectaclass"  onchange="fetchData(this.value)">
+           <%if(ShowClass.length > 0) {%>
+            <% for(var i=0;i<ShowClass.length;i++){%>
+                <option id="<%= ShowClass[i].id %>" value="<%= ShowClass[i].id %>"> <%= ShowClass[i].classname%> </option>
+            <%}%>
+           <%}else{%>
+            <option disabled selected value="No">---------- no ---------- </option>
+           <%}%>
+        </select></p>
+
+    </div>
+</div>
+</div>
+</div>
+
+<% include ../../../Elements/footers %>
+<script>
+    function fetchData(id){
+        alert(id);
+        var id=id;
+        var url="/setting/ManageBatch/fetchBatch/"+id;
+    
+        $.ajax({
+            url:url,
+            type:'POST',
+            data: 'id=' + id,
+            dataType: 'json',
+            success: function(json) {
+               console.log(json);
+            }
+        });
+
+    }
+</script>
+</html>

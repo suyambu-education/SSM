@@ -1,0 +1,48 @@
+<% include ../Elements/sidenav %>    
+        <div class="content-i">
+                <div class="content-box" style="height: 1388px;">
+                    <div class="row">
+                        <div class="col-sm-12">
+    <a href="/library/new"> <button class="btn btn-success">Add New</button></a>
+<hr>
+    <% if(libraryBookList.length>0){%>
+    <table border="1" cellpadding=5 cellspaccing=5>
+        <thead>
+            <th>Book Number</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Tags</th>
+            <th>Status</th>
+            <th style="width: 290px"></th>       
+        </thead>
+        <tbody>
+            <%for(var i = 0; i < libraryBookList.length;i++ ){ var j=i+1; %>
+            <tr>
+                <td>
+                   <%= libraryBookList[i].booknumber %>
+                </td>
+                <td> <%= libraryBookList[i].title %></td>
+                <td> <%= libraryBookList[i].author %></td>
+                <% if(libraryBookList[i].referencebook != '' ) { %>
+                <td> Reference Book ,<%= libraryBookList[i].customtags %> </td>
+                <%} else { %>
+                    <td></td>
+                <% } %>
+                <td> <%= libraryBookList[i].status %></td>
+                <td>
+                        <form action="delete/<%= libraryBookList[i]._id %>" method="POST"> <a class="btn btn-warning" href="/library/view/book/<%= libraryBookList[i]._id %>">View</a> | <a href="/library/edit/<%= libraryBookList[i]._id %>" class="btn btn-success" >Edit</a> | <button class="btn btn-danger">Delete</button>
+                    </form>
+                </td>              
+            </tr>
+            <%}%>
+        </tbody>
+    </table>
+    <%} else { %>
+        <p>No Record Found <a href="/library/new"><button class="btn btn-success"> Add New </button></a></p>
+        <%}%>
+</div>
+</div>
+</div>
+</div>
+
+<% include ../Elements/footers %>

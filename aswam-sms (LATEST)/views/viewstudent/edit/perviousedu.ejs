@@ -1,0 +1,53 @@
+<% include ../../Elements/sidenav %>    
+        <div class="content-i">
+                <div class="content-box" style="height: 1388px;">
+                    <div class="row">
+                        <div class="col-sm-12">
+        <form action="/Previous/update/<%= PreviousEdu._id %>" method="post">
+        <div class="row">
+           
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8" style="background-color:#fff; padding: 20px">
+                    <div class="col-md-12">
+                        
+                      
+                        <div class="col-md-12">
+                                <label for="">Previous Educational Details</label>
+                                <div style="  height: 3px;width: 100%;background-color: brown;"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div>
+                            Institution Name <input type="text" value="<%= PreviousEdu.Institution_Name %>" class="form-control" name="Institution_Name" id="fname">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                                Class  <input type="text" name="Class"  value="<%= PreviousEdu.Class %>" class="form-control" id="Class">
+                        </div>
+                       
+                        
+                        <div class="col-md-6">
+                                Year <input type="number" name="Year" value="<%= PreviousEdu.Year %>" id="Year" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                                Total marks <input type="number" value="<%= PreviousEdu.Total_marks %>" name="Total_marks" id="Total_marks" class="form-control">
+                        </div>
+                        
+                        
+                        <div class="col-md-12" style="padding: 40px">
+                              <input type="submit" value="Update" class="btn btn-success">
+                        </div>
+                     </div>  
+                   
+                </div>
+                 <div class="col-sm-2" style="background-color:#fff;">
+
+                </div>
+                
+        </div>
+</form></div>
+</div>
+</div>
+</div>
+
+<% include ../../Elements/footers %>

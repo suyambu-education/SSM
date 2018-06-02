@@ -1,0 +1,54 @@
+<% include ../Elements/sidenav %>    
+        <div class="content-i">
+                <div class="content-box" style="height: 1388px;">
+                    <div class="row">
+                        <div class="col-sm-12">
+    <form action="/library/update/<%= editdata._id %>" method="post">
+    
+    <div class="col-md-4"> 
+            <label for="">Book Number </label> 
+            <input class="form-control"  type="number" name="booknumber" value="<%= editdata.booknumber %>" id="">
+    </div>
+    <div class="col-md-4">
+            <label for="">Title</label> <input type="text" name="title" id="" value="<%= editdata.title %>" class="form-control">
+    </div>
+    <div class="col-md-4">
+            <label for="">Author</label> <input class="form-control" type="text" value="<%= editdata.author %>" name="author">
+    </div>
+    <div class="col-md-4" style="padding: 15px;">
+        <label for="">Tags</label>   
+        <% if(editdata.referencebook!="on") {%>
+            <input type="checkbox" name="referencebook" id="">Reference Book
+        <%}else{%>
+            <input type="checkbox" name="referencebook" id="" checked>Reference Book
+        <% } %>
+       
+    </div>   
+    <div class="col-md-4">
+        <label for="">Custom Tags</label>  <input class="form-control" type="text" value="<%= editdata.customtags %>" name="customtags">
+
+    </div>
+   
+    <div class="col-md-4"> 
+        <label for="">Date of buying</label> <input class="form-control" type="Date" value="<%= dateofbuying %>" name="dateofbuying">
+    </div>
+   
+    <div class="col-md-4"> 
+            <label for="">Status</label> 
+            <select name="status" class="form-control">
+                <option value="<%= editdata.status %>" selected><%= editdata.status %></option>
+                <option value="Available">Available</option>
+                <option value="Binding">Binding</option>
+                <option value="Lost">Lost</option>
+            
+            </select>
+    </div>
+    <div class="col-md-4" style="padding: 15px;">
+        <button type="submit" class="btn btn-success" > update </button>
+    </div>
+    </form></div>
+</div>
+</div>
+</div>
+
+<% include ../Elements/footers %>

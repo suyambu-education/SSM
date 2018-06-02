@@ -1,0 +1,46 @@
+<% include ../Elements/sidenav %>    
+        <div class="content-i">
+                <div class="content-box" style="height: 1388px;">
+                    <div class="row">
+                        <div class="col-sm-12">
+    <form action="/library/save" method="post">
+    <div class="col-md-4">
+            <label for="" class="label">Book addition mode</label> <select class="form-control" name="bookadditionmode" id="">
+                <option value="General">General</option>
+                <option value="ByBarcode">By Barcode</option>
+            </select>
+    </div>
+    <div class="col-md-4"> 
+            <label for="">Book Number </label> <input class="form-control" value="<%= booknumber %>" type="number" name="booknumber" id="">
+    </div>
+    <div class="col-md-4">
+            <label for="">Title</label> <input type="text" name="title" id="" class="form-control">
+    </div>
+    <div class="col-md-4">
+            <label for="">Author</label> <input class="form-control" type="text" name="author">
+    </div>
+    <div class="col-md-4" style="padding: 15px;">
+        <label for="">Tags</label>    <input type="checkbox" name="referencebook" id="">Reference Book
+    </div>   
+    <div class="col-md-4">
+        <label for="">Custom Tags</label>  <input class="form-control" type="text" name="customtags">
+
+    </div>
+    <div class="col-md-4">
+        <label for="">No. of copies</label> <input class="form-control" type="number" name="noofcopies">
+    </div>
+    <div class="col-md-4">
+        <label for="">Book Edition</label> <input class="form-control" type="number" name="bookedition">
+    </div>
+    <div class="col-md-4"> 
+        <label for="">Date of buying</label> <input class="form-control" type="Date" name="dateofbuying">
+    </div>
+    <div class="col-md-4" style="padding: 15px;">
+        <button type="submit" class="btn btn-success" > Create </button>
+    </div>
+    </form></div>
+</div>
+</div>
+</div>
+
+<% include ../Elements/footers %>

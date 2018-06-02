@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Students List</title>
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+	</head>
+	<body>
+		<div class="container">
+			<h3><a href="/students/create">Create Students</a></h3>
+			<h1>Students List</h1>
+			<% if(students.length>0) { %>
+			<table class="list-table">
+				<thead>
+					<tr>
+						<th>Student Name</th>
+						<th>Phone No</th>
+						<th>Age</th>
+						<th>Email</th>
+						<th>Modified</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% for(var i=0; i<students.length;i++) { %>
+						<tr>
+							<td><a href="/students/show/<%= students[i]._id%>"><%= students[i].name%></a></td>
+							<td><%= students[i].phone %></td>
+							<td><%= students[i].age %></td>
+							<td><%= students[i].email %></td>
+							<td><%= students[i].updated_at %></td>
+							<td>
+								<a href="/students/edit/<%= students[i]._id%>"> Edit</a><br>
+								<form action="/students/delete/<%= students[i]._id%>" method="post">
+									<button type="submit">DELETE</button>
+								</form>
+							</td>
+						</tr>
+					<% } %>
+				</tbody>
+			</table>
+			<% } else { %>
+				<div>No students found.</div>
+			<% } %>
+		</div>
+	</body>
+</html>

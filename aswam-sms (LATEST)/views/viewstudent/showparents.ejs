@@ -1,0 +1,42 @@
+<% include ../Elements/sidenav %>    
+        <div class="content-i">
+                <div class="content-box" style="height: 1388px;">
+                    <div class="row">
+                        <div class="col-sm-12">
+<% if( Parents.length > 0 ) { %>
+        
+    <table border="1" cellpadding=5>
+        <thead>
+            <th>S No</th>
+            <th>Name</th>
+            <th>Occupation</th>
+            <th>Mobile</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </thead>
+        <tbody>
+                <% for(var i=0; i<Parents.length;i++) { %>
+                   <% var j=i; %>
+                   <% j=j+1; %>
+            <tr>
+                <td style="text-align: center"><%= j %></td>
+                <td><%= Parents[i].First_Name  %></td>
+                <td><%= Parents[i].Occupation %></td>
+                <td><%= Parents[i].Mobile %></td>
+                <td style="color: brown"><a href="/parents/edit/<%= Parents[i]._id %>" style="color: brown">Edit File</a> </td>
+                <td style="color: brown">
+                    <form action="/parents/delete/<%= Parents[i]._id %>" method="POST">
+                            <button style="color: brown">Delete</button> 
+                    </form>
+                </td>
+            </tr>    
+            <% } %>
+        </tbody>
+    </table>
+    <% } %>
+</div>
+</div>
+</div>
+</div>
+
+<% include ../Elements/footers %>
